@@ -117,7 +117,7 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.025em; }
 }
 
 .btn-action-green:hover {
-    background-color: #a3c415;
+    background-color: #b4dc02;
     transform: translateY(-2px);
 }
 
