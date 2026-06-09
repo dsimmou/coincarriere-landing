@@ -1,11 +1,13 @@
 :root {
     /* Brand Colors */
     --color-primary: #1875bb;       /* Logo Blue */
+    --color-primary-mid: #16498c;      /* Blue Mid */
+    --color-primary-bright: #0094d9;   /* Blue Bright */
     --color-primary-dark: #0b3f59;
     --color-primary-light: #e6f0f9;
     
     --color-accent: #badc20;        /* Action Green CTA */
-    --color-accent-hover: #a3c415;
+    --color-accent-hover: #b4dc02;
     
     --color-bg: #ffffff;
     --color-bg-light: #f8fafc;
