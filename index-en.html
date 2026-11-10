@@ -7,7 +7,11 @@
     <meta name="description" content="The recruitment platform to quickly find your cooks, waiters, and receptionists. Stop spending hours recruiting.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="apple-touch-icon" href="media/favicon.png">
+    <meta name="theme-color" content="#515A63">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dsimmou.github.io/coincarriere-landing/media/og-image.jpg">
     <link rel="alternate" hreflang="fr" href="https://coincarriere.com/ma/fr/employers/index.html">
     <link rel="alternate" hreflang="en" href="https://coincarriere.com/ma/fr/employers/index-en.html">
     <link rel="alternate" hreflang="ar" href="https://coincarriere.com/ma/fr/employers/index-ar.html">
@@ -42,7 +46,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                     <a href="index-en.html" class="lang-btn active">EN</a>
                     <a href="index-ar.html" class="lang-btn">AR</a>
                 </div>
-                <a href="https://coincarriere.com/register?type=company" class="btn btn-action-green" onclick="fbq('track', 'Lead'); setTimeout(function(){ window.location.href='https://coincarriere.com/register?type=company'; }, 500); return false;">Post a job</a>
+                <a href="https://coincarriere.com/register?type=company" class="btn btn-action-green nav-cta onclick="return goLead(this)">Post a job</a>
             </div>
         </div>
     </nav>
@@ -55,16 +59,16 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 <h1>Short on staff tonight? Find your talents without wasting a second.</h1>
                 <p>Save time on your recruitments. Qualified cooks, waiters, receptionists: access motivated profiles ready to work in just a few clicks.</p>
                 <div class="hero-cta-group">
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
-                        <a href="https://coincarriere.com/register?type=company" class="btn btn-primary btn-large" onclick="fbq('track', 'Lead'); setTimeout(function(){ window.location.href='https://coincarriere.com/register?type=company'; }, 500); return false;">Post your job now</a>
+                    <div class="hero-ctas">
+                        <a href="https://coincarriere.com/register?type=company" class="btn btn-primary btn-large" onclick="return goLead(this)">Post your job now</a>
                         <a href="#how-it-works" class="btn btn-outline btn-large" style="background: white; border-color: transparent; color: var(--color-primary-dark);">See how it works →</a>
                     </div>
                     <span class="micro-copy">Free registration | No commitment</span>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="glass-image" style="transform: rotateY(-10deg) rotateX(5deg); transition: transform 0.5s ease; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);">
-                    <img src="media/equipe.png" alt="Team" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: inherit;">
+                <div class="glass-image tilt">
+                    <img src="media/equipe.webp" alt="Team" width="900" height="712" fetchpriority="high">
                 </div>
             </div>
         </div>
@@ -90,7 +94,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 </div>
             </div>
 
-            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div class="testimonials-grid">
                 <div class="testimonial">
                     <div class="quote-icon">"</div>
                     <p class="quote-text">Finding a reliable Head Waiter during peak season was a nightmare. Thanks to the platform, I received 5 qualified profiles in 2 hours and hired the next day. An invaluable time-saver for my teams.</p>
@@ -206,21 +210,21 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 <ul class="check-list">
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <strong>Your emergencies are our priority:</strong> Features designed for immediate action.
+                        <span><strong>Your emergencies are our priority:</strong> Features designed for immediate action.</span>
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <strong>Zero jargon, 100% field:</strong> An interface so clear you can manage it during service.
+                        <span><strong>Zero jargon, 100% field:</strong> An interface so clear you can manage it during service.</span>
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <strong>No-show reduction:</strong> Automatic candidate reminders with SMS confirmation.
+                        <span><strong>No-show reduction:</strong> Automatic candidate reminders with SMS confirmation.</span>
                     </li>
                 </ul>
             </div>
             <div class="value-visual">
                 <div class="glass-image">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional kitchen in full service" loading="lazy">
+                    <img src="media/cuisine.webp" alt="Professional kitchen in full service" width="900" height="675" loading="lazy">
                 </div>
             </div>
         </div>
@@ -233,7 +237,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
             <p class="faq-intro">Everything you want to know before getting started.</p>
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
                         <span>Is it free? Will there be fees later?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
@@ -243,7 +247,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
                         <span>How many candidates are available on the platform?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
@@ -253,7 +257,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
                         <span>Are candidates really verified? How do you avoid ghosts?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
@@ -263,7 +267,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
                         <span>Can I recruit for multiple establishments with one account?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
@@ -273,7 +277,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
                         <span>Does the platform work for high-end hotels, not just catering?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
@@ -283,7 +287,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFaq(this)">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
                         <span>How long does it take to post a first job offer?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </button>
@@ -302,7 +306,7 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
                 <h2>Build your team today.</h2>
                 <p>Join the hundreds of restaurateurs and hoteliers who have stopped suffering from staff shortages.</p>
                 <div class="cta-actions">
-                    <a href="https://coincarriere.com/register?type=company" class="btn btn-primary btn-large" onclick="fbq('track', 'Lead'); setTimeout(function(){ window.location.href='https://coincarriere.com/register?type=company'; }, 500); return false;">Create my free account</a>
+                    <a href="https://coincarriere.com/register?type=company" class="btn btn-primary btn-large" onclick="return goLead(this)">Create my free account</a>
                     <p class="micro-copy light">Free registration • 2-minute setup • No credit card required</p>
                 </div>
             </div>
@@ -319,18 +323,47 @@ src="https://www.facebook.com/tr?id=987534587353749&ev=PageView&noscript=1"/></n
         </div>
     </footer>
 
+    <!-- Sticky mobile CTA -->
+    <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+        <a href="https://coincarriere.com/register?type=company" class="btn btn-primary" tabindex="-1" onclick="return goLead(this)">Post a job for free</a>
+    </div>
+
     <script>
+        function goLead(link) {
+            try { fbq('track', 'Lead'); } catch (e) {}
+            setTimeout(function () { window.location.href = link.href; }, 200);
+            return false;
+        }
+
         function toggleFaq(button) {
             const item = button.closest('.faq-item');
-            
-            // Optional: close other items
-            const allItems = document.querySelectorAll('.faq-item');
-            allItems.forEach(i => {
-                if (i !== item) i.classList.remove('open');
+            const willOpen = !item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(function (i) {
+                i.classList.remove('open');
+                i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
             });
-
-            item.classList.toggle('open');
+            if (willOpen) {
+                item.classList.add('open');
+                button.setAttribute('aria-expanded', 'true');
+            }
         }
+
+        // Sticky CTA: visible on mobile once the hero is out of view, hidden over the final CTA
+        (function () {
+            var bar = document.getElementById('sticky-cta');
+            var hero = document.querySelector('.hero');
+            var finalCta = document.querySelector('.final-cta');
+            if (!bar || !hero || !('IntersectionObserver' in window)) return;
+            var heroVisible = true, finalVisible = false;
+            function update() {
+                var show = !heroVisible && !finalVisible;
+                bar.classList.toggle('visible', show);
+                bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+                bar.querySelector('a').tabIndex = show ? 0 : -1;
+            }
+            new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting; update(); }).observe(hero);
+            if (finalCta) new IntersectionObserver(function (e) { finalVisible = e[0].isIntersecting; update(); }).observe(finalCta);
+        })();
     </script>
 </body>
 </html>
